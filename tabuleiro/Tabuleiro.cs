@@ -13,7 +13,7 @@ namespace tabuleiro
             pecas = new Peca[linha, colunas];
 
         }
-        public Peca Peca(int linha, int coluna) {
+        public Peca peca(int linha, int coluna) {
             return pecas[linha, coluna];
         }
 

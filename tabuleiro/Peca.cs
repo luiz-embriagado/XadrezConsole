@@ -1,7 +1,7 @@
 ﻿using tabuleiro.Enums;
 namespace tabuleiro
 {
-    internal class Peca
+    internal abstract class Peca
     {
 
         public Posicao posicao { get; set; }
@@ -13,10 +13,15 @@ namespace tabuleiro
             this.posicao = null;
             this.cor = cor;
             this.qteMovimentos = 0;
+            this.tab = tab;
         }
 
         public void incrementarQneMovimentos() {
             qteMovimentos++;
         }
+
+        public abstract bool[,] movimentosPossiveis();
+
+        
     }
 }
